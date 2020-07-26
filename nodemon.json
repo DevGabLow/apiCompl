@@ -1,0 +1,11 @@
+{
+    "env":{
+        "MYSQL_USER": "root",
+        "MYSQL_PASSWORD": "root",
+        "MYSQL_DATABASE": "importados",
+        "MYSQL_HOST": "localhost",
+        "MYSQL_PORT": 3306,
+
+        "JWT_KEY": "02f93278aa6e5bc29169f79a224bbf6a"
+    }
+}
