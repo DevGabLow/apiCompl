@@ -103,8 +103,8 @@ exports.deleteItem = async (req, res, next) => {
         const query = `UPDATE items SET is_deleted = ?  WHERE id = ?; `;
         const result = await mysql.execute(query, [req.body.deleted,req.body.id]);
         const response = {
-            id: req.body.id,
-            deleted: req.body.deleted
+            deleted: req.body.deleted,
+            id: req.body.id
         }
         return res.status(202).send(response)
     } catch (error) {

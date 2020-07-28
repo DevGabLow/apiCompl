@@ -1,0 +1,3 @@
+[submodule "theme/projetoTeste"]
+    path = themes/projetoTeste
+    url = https://github.com/DevGabLow/projetoTeste.git
