@@ -75,7 +75,8 @@ exports.getByIdDelivery = async (req, res, next) => {
                          d.is_enabled,
                          d.is_deleted,
                          d.quantity_order,
-                         i.name as itemName
+                         i.name as itemName,
+                         i.id as itemId
                        FROM delivery d
                        INNER JOIN items i on i.id = d.item_id
                        where d.id = ?;`;
@@ -95,7 +96,8 @@ exports.getByIdDelivery = async (req, res, next) => {
             quantity: result[0].quantity_order,
             enabled: result[0].is_deleted,
             deleted: result[0].is_enabled,
-            itemName: result[0].itemName
+            itemName: result[0].itemName,
+            itemId: result[0].itemId
 
         }
         return res.status(200).send(response);
