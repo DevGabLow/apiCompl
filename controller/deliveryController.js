@@ -113,6 +113,7 @@ exports.updateDelivery = async (req, res, next) => {
         const query = `UPDATE delivery 
         SET name     = ?, 
             local    = ?,
+            phone    = ?,
             hora     = ?,
             item_id  = ?
             WHERE
@@ -120,6 +121,7 @@ exports.updateDelivery = async (req, res, next) => {
         await mysql.execute(query, [
             req.body.name,
             req.body.local,
+            req.body.phone,
             req.body.hora,
             req.body.itemId,
             req.body.id]);
