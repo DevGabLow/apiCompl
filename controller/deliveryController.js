@@ -39,7 +39,7 @@ exports.getDelivery = async (req, res, next) => {
 
 exports.createDelivery = async (req, res, next) => {
     try {
-        const query = `INSERT INTO delivery (name,local,hora,status,quantity_order,item_id) VALUES (?,?,?,?,?,?);`;
+        const query = `INSERT INTO delivery (name,local,phone,hora,status,quantity_order,item_id) VALUES (?,?,?,?,?,?,?);`;
         const result = await mysql.execute(query, [
             req.body.name,
             req.body.local,
