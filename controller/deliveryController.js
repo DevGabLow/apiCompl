@@ -43,6 +43,7 @@ exports.createDelivery = async (req, res, next) => {
         const result = await mysql.execute(query, [
             req.body.name,
             req.body.local,
+            req.body.phone,
             req.body.hora,
             req.body.status,
             req.body.quantity,
@@ -51,6 +52,7 @@ exports.createDelivery = async (req, res, next) => {
         const response = {
             name: req.body.name,
             local: req.body.local,
+            phone: req.body.phone,
             hora: req.body.hora,
             status: req.body.status,
             quantity: req.body.quantity,
