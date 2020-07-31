@@ -15,7 +15,8 @@ exports.getDelivery = async (req, res, next) => {
                                             i.preco
                                             FROM delivery d
                                             INNER JOIN items i on i.id = d.item_id
-                                            WHERE d.is_Enabled = 1 AND d.is_deleted = 0;`);
+                                            WHERE d.is_Enabled = 1 AND d.is_deleted = 0
+                                            ORDER BY ASC;`);
 
         const response = result.map(delivery => {
             return {
