@@ -16,7 +16,7 @@ exports.getDelivery = async (req, res, next) => {
                                             FROM delivery d
                                             INNER JOIN items i on i.id = d.item_id
                                             WHERE d.is_Enabled = 1 AND d.is_deleted = 0
-                                            ORDER BY d.id ASC;`);
+                                            ORDER BY d.id DESC;`);
 
         const response = result.map(delivery => {
             return {
